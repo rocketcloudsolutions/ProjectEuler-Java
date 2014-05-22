@@ -145,4 +145,73 @@ public class Problems {
             }
         }
     }
+
+    public int reverseInteger ( int num )
+    {
+        int x = num;
+        int reverse = 0;
+        while ( num != 0 ) {
+            reverse = reverse * 10;
+            reverse = reverse + (num % 10);
+            num = num / 10;
+        }
+
+        return reverse;
+    }
+
+    public boolean isPalindrome ( int num )
+    {
+        int reverse = this.reverseInteger(num);
+
+        if (reverse == num) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public int largestPalindromeProduct ()
+    {
+
+        for (int x = 999; x > 99; x--) {
+            for (int y = 999; y > 99; y--) {
+                int z = x * y;
+
+                boolean result = this.isPalindrome(z);
+                if (result) {
+                    return z;
+                }
+            }
+        }
+
+        return 0;
+    }
+
+    public int largestPalindromeProduct2 ()
+    {
+        int x = 999;
+        while ( x > 99) {
+            int y = x * x;
+
+            boolean result = this.isPalindrome(y);
+            if (result) {
+                System.out.format("%d%n",x);
+                System.out.format("%d%n",x);
+                return y;
+            }
+
+            y = x * (x-1);
+
+            result = this.isPalindrome(y);
+            if (result) {
+                System.out.format("%d%n",x);
+                System.out.format("%d%n",x-1);
+                return y;
+            }
+
+            x--;
+        }
+
+        return 0;
+    }
 }
