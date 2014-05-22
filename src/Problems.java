@@ -172,46 +172,20 @@ public class Problems {
 
     public int largestPalindromeProduct ()
     {
-
+        int largest = 0;
         for (int x = 999; x > 99; x--) {
             for (int y = 999; y > 99; y--) {
                 int z = x * y;
 
                 boolean result = this.isPalindrome(z);
                 if (result) {
-                    return z;
+                    if ( z > largest ) {
+                        largest = z;
+                    }
                 }
             }
         }
 
-        return 0;
-    }
-
-    public int largestPalindromeProduct2 ()
-    {
-        int x = 999;
-        while ( x > 99) {
-            int y = x * x;
-
-            boolean result = this.isPalindrome(y);
-            if (result) {
-                System.out.format("%d%n",x);
-                System.out.format("%d%n",x);
-                return y;
-            }
-
-            y = x * (x-1);
-
-            result = this.isPalindrome(y);
-            if (result) {
-                System.out.format("%d%n",x);
-                System.out.format("%d%n",x-1);
-                return y;
-            }
-
-            x--;
-        }
-
-        return 0;
+        return largest;
     }
 }

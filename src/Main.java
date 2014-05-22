@@ -23,7 +23,7 @@ public class Main {
         //fun.findPrimeFactors(330);
         ////fun.findPrimeFactors(600851475143L);
 
-        //Problem 4 - WIP
-        System.out.format("%d%n",fun.largestPalindromeProduct2());
+        //Problem 4
+        System.out.format("%d%n",fun.largestPalindromeProduct());
     }
 }
