@@ -24,6 +24,9 @@ public class Main {
         ////fun.findPrimeFactors(600851475143L);
 
         //Problem 4
-        System.out.format("%d%n",fun.largestPalindromeProduct());
+        //System.out.format("%d%n",fun.largestPalindromeProduct());
+
+        //Problem 5 - WIP
+        System.out.format("%d%n",fun.smallestMultiple());
     }
 }

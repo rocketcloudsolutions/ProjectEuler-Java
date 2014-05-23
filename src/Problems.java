@@ -188,4 +188,33 @@ public class Problems {
 
         return largest;
     }
+
+    public int smallestMultiple()
+    {
+        int smallest = 0;
+        int n = 1;
+
+        while(smallest == 0) {
+            boolean passed = false;
+            checkDiv:
+            for (int x = 1; x < 21; x++) {
+                float y = (float)n/(float)x;
+                if(y != 0.0 && y%1 == 0) {
+                    passed = true;
+                } else {
+                    passed = false;
+                    break checkDiv;
+                }
+            }
+
+            if(passed) {
+                smallest = n;
+                return smallest;
+            } else {
+                n++;
+            }
+        }
+
+        return smallest;
+    }
 }
