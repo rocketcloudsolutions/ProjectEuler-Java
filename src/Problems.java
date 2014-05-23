@@ -189,17 +189,18 @@ public class Problems {
         return largest;
     }
 
-    public int smallestMultiple()
+    public double smallestMultiple()
     {
-        int smallest = 0;
-        int n = 1;
+        double smallest = 0.0;
+        double n = 1.0;
 
-        while(smallest == 0) {
+        while(smallest == 0.0) {
             boolean passed = false;
             checkDiv:
-            for (int x = 1; x < 21; x++) {
-                float y = (float)n/(float)x;
-                if(y != 0.0 && y%1 == 0) {
+            for (double x = 1.0; x < 21.0; x++) {
+                double y = n/x;
+                double z = y%1.0;
+                if(y != 0.0 && z == 0.0) {
                     passed = true;
                 } else {
                     passed = false;
