@@ -11,7 +11,6 @@ public class Problems {
         int arrayPos = 0;
         for (int i = 0; i < 1000; i++) {
             if(i%3 == 0  || i%5 == 0) {
-                //System.out.format("%d%n",i);
                 arr[arrayPos] = i;
                 arrayPos++;
             }
@@ -41,7 +40,6 @@ public class Problems {
     {
         int answer = 0;
         for (int i = 0; i < arrA.length; i++) {
-            //System.out.format("%d%n",arr[i]);
             answer += arrA[i];
         }
         return answer;
